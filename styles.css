@@ -1,0 +1,391 @@
+:root {
+    --black: #191516;
+    --white: #FBFBFF;
+    --orange: #FF4A1C;
+    --blue: #01BAEF;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /** 1rem = 10px **/
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+      font-family: Ubuntu, sans-serif;
+      font-size: 1.7rem;
+      line-height: 2;
+}
+
+/** GENERALES **/
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.2rem ;
+}
+
+h3 {
+    font-size: 2.7rem;
+}
+
+p {
+   padding: 3%; 
+}
+
+ul {
+    list-style: none;
+  }
+  
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+/** NAVEGACION **/
+/* nav */
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--black);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    z-index: 10;
+  }
+  
+  .nav-list {
+    display: flex;
+    margin-right: 2rem;
+  }
+  
+  @media (max-width: 28.75em) {
+    .nav {
+      justify-content: center;
+    }
+  
+    .nav-list {
+      margin: 0 1rem;
+    }
+  }
+  
+  .nav-list a {
+    display: block;
+    font-size: 2.2rem;
+    padding: 2rem;
+  }
+  
+  .nav-list a:hover {
+    background: var(--orange);
+  }
+
+/*
+nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      overflow: hidden;
+      background-color: var(--black);
+      color: white;
+      position: fixed;
+      top: 0;
+      width: 100%;
+}
+
+nav ul li { 
+    float: right;
+}
+
+li a {
+      display: block;
+      color: var(--white);
+      text-align: center;
+      padding: 20px 15px;
+      text-decoration: none;
+}
+
+li a:hover {
+    background-color: var(--orange);
+    transition: 0.3s;
+}
+*/
+/** SOBRE MI **/
+#about {
+    background-color: var(--orange);
+    width: 100%;
+    height: 100vh;
+}
+
+#about h1 {
+    text-align: center;
+    color: var(--white);
+    margin: 0 auto;
+    padding-top: 25rem;
+    font-size: 6rem;    
+}
+
+#about p {
+    text-align: center;
+    color: var(--white);
+    margin-top: 0;
+    font-size: 150%;
+    padding-top: 0%;
+    padding-bottom: 25rem;
+    font-size: 4rem;
+}
+
+/** PROYECTOS **/
+#proyectos {
+    background-color: var(--white);
+}
+#proyectos h2 {
+    text-align: center;
+    padding-top: 10rem;
+    color: var(--black);
+    padding-top: 6rem;
+    padding-bottom: 8rem;
+}
+
+.proyectos {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    justify-content: space-evenly;
+}
+
+.project-tile p {
+    text-align: center;
+    padding-top: 0rem;
+    font-size: 2rem;
+}
+
+.parrafo-proyectos {
+    text-align: center;
+}
+
+.img-proyectos {
+    height: 40rem;
+    width: 35rem;
+}
+
+.caja-1 {
+    background: var(--orange);
+    margin-bottom: 3rem;
+    padding: 2rem 2rem;
+}
+
+.caja-1 a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.caja-2 {
+    margin-top: 1rem;
+    
+}
+/** HABILIDADES **/
+#habilidades {
+    background-color: var(--orange);
+    margin-top: 10rem;
+}
+#habilidades h3 {
+    text-align: center;
+    color: var(--white);
+    padding-top: 4rem;
+}
+
+.habilidades {
+    text-align: center;
+}
+
+.habilidades li {
+    font-size: 5rem;
+    display: inline-block;
+    padding: 2% 3%;    
+}
+
+.habilidades i {
+    display: inline-block;
+    color: var(--white);
+}
+
+
+/** TOOLTIPS **/
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 100px;
+    background-color: #555;
+    color: var(--white);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 15px;
+    font-family: Ubuntu, sans-serif;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+/** FOOTER **/
+footer {
+    background: var(--black);  
+    overflow: auto;
+    width: 100%;     
+}
+
+footer p {
+    color: var(--white);
+    text-align: right;
+    font-size: 80%;
+}
+
+.contenedor-principal {
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+}
+
+.contenedor-social {
+    float: right;
+    width: 40%;
+    
+}
+
+.contenedor-texto {
+    float: left;
+    width: 40%;
+}
+
+
+
+/** CONTACTO **/
+.contenedor-social {
+    background-color: var(--black);
+    display: inline;
+}
+.contenedor-texto { 
+    display: inline;
+    text-align: left;
+}
+
+.contenedor-texto p {
+    text-align: center;
+}
+
+.redes-sociales {
+    text-align: left;
+}
+
+.redes-sociales li {
+    display: inline-block;
+    padding: 15px;
+}
+
+.redes-sociales i {
+    font-size: 180%;
+    color: var(--white);
+    text-align: center;
+}
+
+/** MEDIA QUERYS **/
+@media screen and (max-width: 768px) {
+    #about {
+        width: 100%;
+        height: 100%;
+    }
+
+    #about h1 {
+        text-align: center;
+        color: var(--white);
+        margin-top: 5rem;
+        padding-top: 5rem;
+        font-size: 6rem;    
+    }
+
+    #about p {
+        text-align: center;
+        color: var(--white);
+        margin-bottom: 5rem;
+        font-size: 3.5rem;
+        padding-bottom: 8rem;
+    }
+
+    #proyectos h2 {
+        text-align: center;
+        color: var(--black);
+        padding-top: 5rem;
+        padding-bottom: 10rem;
+        font-size: 4rem;
+    }
+
+    .proyectos {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        justify-content: space-evenly;
+    }
+
+    .contenedor-social {
+        background-color: var(--black);
+        display: inline-block;
+    }
+    .contenedor-texto { 
+        display: inline;
+    }
+    
+    .redes-sociales {
+        text-align: left;
+    }
+
+    .redes-sociales li {
+        padding: 5px;
+    }
+    
+    .redes-sociales i {
+        font-size: 130%;
+        color: var(--white);
+        text-align: center;
+    }
+}
